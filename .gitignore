@@ -1,0 +1,5 @@
+.env
+.env.*
+*google-oauth*
+client_secret_*
+node_modules/

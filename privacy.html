@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>개인정보처리방침 · Asset Manager</title>
+    <meta name="description" content="Asset Manager 로컬 에셋 관리 앱 안내" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">본문으로 이동</a>
+    <header>
+      <a class="brand" href="index.html">Asset Manager</a>
+      <nav aria-label="주 메뉴">
+        <a href="index.html">소개</a><a href="privacy.html">개인정보처리방침</a
+        ><a href="terms.html">이용약관</a
+        ><a href="https://github.com/hanalen/asset-manager-site/issues">문의</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="notice">개발 중 · 공개 페이지 검토용 초안</div>
+      <h1>개인정보처리방침</h1>
+      <p>운영자: hanalen · 문서 기준일: 2026년 9월 8일</p>
+      <p>
+        이 문서는 Asset Manager의 현재 개발 버전을 기준으로 작성한 공개 검토용
+        초안입니다. 정식 배포 전에 내용과 시행일을 확정합니다.
+      </p>
+      <h2>1. 로컬에 보관하는 정보</h2>
+      <p>
+        앱은 사용자가 등록한 파일의 경로·파일명·크기·수정 시각,
+        태그·팩·즐겨찾기·출처·라이선스·메모, 프로젝트와 복사 기록, 개인 설정,
+        감시 폴더·등록 대기·초안을 사용자 PC에 보관합니다. 첨부한 증빙은 앱
+        데이터 폴더에 사본으로 저장합니다. 개발자 서버에 이 자료를 자동 전송하지
+        않습니다.
+      </p>
+      <h2>2. Google 계정 연결</h2>
+      <p>
+        Google Drive 백업은 선택 기능입니다. Google의 동의 화면에서 권한을
+        허용하면 연결 계정 이메일과 인증 토큰을 사용합니다. 이메일은 연결된
+        계정을 표시하는 데 사용하고, 토큰은 사용자가 허용한 Drive 백업 작업을
+        수행하는 데 사용합니다. 인증 정보는 Windows 보안 기능으로 암호화하여
+        사용자 PC에 보관하며 DB 백업에 포함하지 않습니다. Chrome 쿠키는 읽거나
+        복사하지 않습니다.
+      </p>
+      <h2>3. Drive에 저장하는 정보와 권한</h2>
+      <p>
+        앱은 drive.file 권한으로 앱이 만들거나 사용자가 앱에 접근을 허용한
+        파일에 접근합니다. Asset Manager Backups 폴더에 관리 정보를 담은 SQLite
+        백업 파일을 저장합니다. 백업에는 에셋·팩·태그·출처·라이선스·메모·증빙
+        연결 정보·프로젝트·복사 이력·설정·감시·등록 대기·초안이 포함됩니다.
+        경로와 사용자가 직접 입력한 정보에도 개인정보가 포함될 수 있습니다.
+      </p>
+      <p>
+        원본 에셋, 실제 증빙 파일, 썸네일·해시 캐시, 오류 로그와 Google 인증
+        정보는 새 DB 백업에 포함하지 않습니다. 백업 파일 자체는 앱에서
+        암호화하지 않습니다. Google Drive의 저장·접근 관리는 Google 계정 설정과
+        Google 정책을 따릅니다.
+      </p>
+      <h2>4. 이용 목적과 공유</h2>
+      <p>
+        Google에서 받은 정보는 계정 표시와 백업 생성·목록
+        조회·다운로드·복원·보관 정책 실행에 사용합니다. 광고, 개인정보 판매, AI
+        모델 학습에 사용하지 않으며 개발자에게 자동 전송하지 않습니다. Google
+        API에서 받은 정보의 사용과 다른 앱으로의 전송은 제한적 사용 요건을
+        포함한
+        <a
+          href="https://developers.google.com/terms/api-services-user-data-policy"
+          >Google API 서비스 사용자 데이터 정책</a
+        >을 준수합니다.
+      </p>
+      <h2>5. 보관과 삭제</h2>
+      <p>
+        로컬 관리 정보와 증빙은 사용자가 삭제할 때까지 PC에 남습니다. 앱을
+        제거하더라도 데이터 폴더가 남을 수 있습니다. 삭제하려면 필요한 자료를
+        별도로 보관한 뒤 앱을 종료하고 앱 데이터 폴더를 삭제하세요. 폴더 등록
+        해제는 정보를 숨기는 기능으로, 데이터 삭제가 아닙니다.
+      </p>
+      <p>
+        수동 Drive 백업은 자동 삭제하지 않습니다. 자동 백업을 켠 경우, 새 백업
+        성공 후 같은 계정·라이브러리의 자동 백업 중 최근 10개를 초과한 파일을
+        Drive 휴지통으로 이동합니다. 연결 해제는 로컬 인증 토큰을 제거하지만
+        Drive 백업을 삭제하지 않습니다. 원격 백업은 Google Drive에서 직접 삭제할
+        수 있으며 영구 삭제는 휴지통에서도 처리해야 합니다. Google 계정의
+        <a href="https://myaccount.google.com/connections">연결 관리</a>에서 앱
+        권한을 철회할 수 있습니다.
+      </p>
+      <h2>6. 이 웹사이트와 문의</h2>
+      <p>
+        이 사이트는 GitHub Pages에서 제공하며 별도의 분석 도구·광고·문의 폼을
+        사용하지 않습니다. 호스팅과 GitHub Issues 이용 과정에서는 GitHub가 자체
+        정책에 따라 접속 정보 등을 처리할 수 있습니다.
+        <a
+          href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement"
+          >GitHub 개인정보처리방침</a
+        >을 참고하세요.
+      </p>
+      <p>
+        문의는
+        <a href="https://github.com/hanalen/asset-manager-site/issues"
+          >GitHub Issues</a
+        >에서 받습니다. Issues는 공개되므로 비밀번호, 토큰, 영수증, 개인
+        파일이나 개인정보가 포함된 DB를 올리지 마세요. 민감한 내용은 공개하지
+        않고 별도 연락 방법을 요청해 주세요.
+      </p>
+      <h2>7. 변경 안내</h2>
+      <p>
+        데이터 처리 방식이 바뀌면 이 페이지의 기준일과 변경 내용을 갱신합니다.
+        중요한 변경은 앱 안내 또는 공개 저장소 공지로 알립니다.
+      </p>
+    </main>
+    <footer>
+      Asset Manager · hanalen · <a href="privacy.html">개인정보처리방침</a> ·
+      <a href="terms.html">이용약관</a>
+    </footer>
+  </body>
+</html>
